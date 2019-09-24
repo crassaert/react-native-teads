@@ -2,7 +2,7 @@
 
 ## Getting started
 
-`$ npm install react-native-teads --save`
+`$ yarn add react-native-teads`
 
 ### Mostly automatic installation
 
