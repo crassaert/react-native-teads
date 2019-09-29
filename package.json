@@ -3,19 +3,15 @@
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "postinstall": "rm -rf ../../ios/TeadsSDK.framework && cp -a ios/TeadsSDK.framework ../../ios",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cisclub/react-native-teads"
+    "url": "https://github.com/crassaert/react-native-teads"
   },
   "keywords": [
     "react-native",
     "teads"
   ],
-  "author": "cisclub",
+  "author": "Cedric Rassaert",
   "license": "",
   "peerDependencies": {
     "react-native": "^0.41.2"
