@@ -6,7 +6,7 @@
 
 @implementation RNTTeadsInReadAdViewManager
 
-RCT_EXPORT_MODULE(RNTTeadsInReadAdViewManager)
+RCT_EXPORT_MODULE(RNTTeadsInReadAdView)
 
 RCT_EXPORT_VIEW_PROPERTY(onAdClose, RCTBubblingEventBlock);
 RCT_EXPORT_VIEW_PROPERTY(onDidReceiveAd, RCTBubblingEventBlock);
@@ -21,7 +21,7 @@ RCT_CUSTOM_VIEW_PROPERTY(pid, NSInteger, TFAInReadAdView) {
     TFAInReadAdView *view = [[TFAInReadAdView alloc] initWithPid:0
                                                      andDelegate:self];
     [view loadWithTeadsAdSettings:nil];
-    
+
     return view;
 }
 
@@ -31,7 +31,7 @@ RCT_CUSTOM_VIEW_PROPERTY(pid, NSInteger, TFAInReadAdView) {
     if (!ad.onAdClose) {
         return;
     }
-    
+
     ad.onAdClose(nil);
 }
 
@@ -39,7 +39,7 @@ RCT_CUSTOM_VIEW_PROPERTY(pid, NSInteger, TFAInReadAdView) {
     if (!ad.onAdError) {
         return;
     }
-    
+
     ad.onAdError(@{@"errorMessage" : errorMessage});
 }
 
@@ -47,7 +47,7 @@ RCT_CUSTOM_VIEW_PROPERTY(pid, NSInteger, TFAInReadAdView) {
     if (!ad.onAdDidFail) {
         return;
     }
-    
+
     ad.onAdDidFail(@{@"errorCode" : @(adFailReason.errorCode),
                      @"errorMessage" : adFailReason.errorMessage});
 }
@@ -56,7 +56,7 @@ RCT_CUSTOM_VIEW_PROPERTY(pid, NSInteger, TFAInReadAdView) {
     if (!ad.onDidReceiveAd) {
         return;
     }
-    
+
     ad.onDidReceiveAd(@{@"adRatio" : @(adRatio)});
 }
 
