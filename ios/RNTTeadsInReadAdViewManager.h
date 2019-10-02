@@ -16,10 +16,3 @@
 @property (nonatomic, copy) RCTBubblingEventBlock onAdDidFail;
 
 @end
-
-
-@interface RCT_EXTERN_MODULE(CalendarManager, NSObject)
-
-RCT_EXTERN_METHOD(pid:(NSInteger *)pid onAdClose:(RCTBubblingEventBlock)event onDidReceiveAd:(RCTBubblingEventBlock)event)
-
-@end
