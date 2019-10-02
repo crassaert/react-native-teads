@@ -7,9 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3E7B58A1CC2AC0600A0062D /* RNTTeadsInReadAdViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNTTeadsInReadAdViewManager.m */; };
+		A0029B4E2343E63F0078A9A4 /* libcxxreact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A044DF6C2343E3AD00290DCF /* libcxxreact.a */; };
+		A0029B582343F1910078A9A4 /* RNTTeadsInReadAdViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNTTeadsInReadAdViewManager.m */; };
+		A0029B5A234400520078A9A4 /* RNTeadsInReadAdViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0029B59234400520078A9A4 /* RNTeadsInReadAdViewManager.swift */; };
+		A044DF732343E40C00290DCF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A044DF642343E3AD00290DCF /* libReact.a */; };
 		CEFD1D43229E5F890012CBFD /* TeadsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFD1D42229E5F890012CBFD /* TeadsSDK.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A044DF632343E3AD00290DCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A044DF582343E3AD00290DCF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
+			remoteInfo = React;
+		};
+		A044DF652343E3AD00290DCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A044DF582343E3AD00290DCF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28131D9B038B00D4039D;
+			remoteInfo = "React-tvOS";
+		};
+		A044DF672343E3AD00290DCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A044DF582343E3AD00290DCF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3C059A1DE3340900C268FA;
+			remoteInfo = yoga;
+		};
+		A044DF692343E3AD00290DCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A044DF582343E3AD00290DCF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3C06751DE3340C00C268FA;
+			remoteInfo = "yoga-tvOS";
+		};
+		A044DF6B2343E3AD00290DCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A044DF582343E3AD00290DCF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9251DE5FBEC00167DC4;
+			remoteInfo = cxxreact;
+		};
+		A044DF6D2343E3AD00290DCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A044DF582343E3AD00290DCF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9321DE5FBEE00167DC4;
+			remoteInfo = "cxxreact-tvOS";
+		};
+		A044DF6F2343E3AD00290DCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A044DF582343E3AD00290DCF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD90B1DE5FBD600167DC4;
+			remoteInfo = jschelpers;
+		};
+		A044DF712343E3AD00290DCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A044DF582343E3AD00290DCF /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
+			remoteInfo = "jschelpers-tvOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		58B511D91A9E6C8500147676 /* CopyFiles */ = {
@@ -25,6 +87,9 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNTeads.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNTeads.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0029B59234400520078A9A4 /* RNTeadsInReadAdViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNTeadsInReadAdViewManager.swift; sourceTree = "<group>"; };
+		A0029B5B234400870078A9A4 /* RNTeadsInReadAdViewManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNTeadsInReadAdViewManager-Bridging-Header.h"; sourceTree = "<group>"; };
+		A044DF582343E3AD00290DCF /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNTTeadsInReadAdViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNTTeadsInReadAdViewManager.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNTTeadsInReadAdViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNTTeadsInReadAdViewManager.m; sourceTree = "<group>"; };
 		CEFD1D42229E5F890012CBFD /* TeadsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TeadsSDK.framework; sourceTree = "<group>"; };
@@ -35,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0029B4E2343E63F0078A9A4 /* libcxxreact.a in Frameworks */,
+				A044DF732343E40C00290DCF /* libReact.a in Frameworks */,
 				CEFD1D43229E5F890012CBFD /* TeadsSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,11 +120,37 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				A0029B5B234400870078A9A4 /* RNTeadsInReadAdViewManager-Bridging-Header.h */,
+				A0029B59234400520078A9A4 /* RNTeadsInReadAdViewManager.swift */,
 				CEFD1D42229E5F890012CBFD /* TeadsSDK.framework */,
 				B3E7B5881CC2AC0600A0062D /* RNTTeadsInReadAdViewManager.h */,
 				B3E7B5891CC2AC0600A0062D /* RNTTeadsInReadAdViewManager.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				A044DF572343E3AD00290DCF /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		A044DF572343E3AD00290DCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A044DF582343E3AD00290DCF /* React.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A044DF592343E3AD00290DCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A044DF642343E3AD00290DCF /* libReact.a */,
+				A044DF662343E3AD00290DCF /* libReact.a */,
+				A044DF682343E3AD00290DCF /* libyoga.a */,
+				A044DF6A2343E3AD00290DCF /* libyoga.a */,
+				A044DF6C2343E3AD00290DCF /* libcxxreact.a */,
+				A044DF6E2343E3AD00290DCF /* libcxxreact.a */,
+				A044DF702343E3AD00290DCF /* libjschelpers.a */,
+				A044DF722343E3AD00290DCF /* libjschelpers.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +184,7 @@
 				TargetAttributes = {
 					58B511DA1A9E6C8500147676 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -99,11 +193,18 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
 			productRefGroup = 58B511D21A9E6C8500147676;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A044DF592343E3AD00290DCF /* Products */;
+					ProjectRef = A044DF582343E3AD00290DCF /* React.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				58B511DA1A9E6C8500147676 /* RNTeads */,
@@ -111,12 +212,72 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		A044DF642343E3AD00290DCF /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = A044DF632343E3AD00290DCF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A044DF662343E3AD00290DCF /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = A044DF652343E3AD00290DCF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A044DF682343E3AD00290DCF /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = A044DF672343E3AD00290DCF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A044DF6A2343E3AD00290DCF /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = A044DF692343E3AD00290DCF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A044DF6C2343E3AD00290DCF /* libcxxreact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcxxreact.a;
+			remoteRef = A044DF6B2343E3AD00290DCF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A044DF6E2343E3AD00290DCF /* libcxxreact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcxxreact.a;
+			remoteRef = A044DF6D2343E3AD00290DCF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A044DF702343E3AD00290DCF /* libjschelpers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjschelpers.a;
+			remoteRef = A044DF6F2343E3AD00290DCF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A044DF722343E3AD00290DCF /* libjschelpers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjschelpers.a;
+			remoteRef = A044DF712343E3AD00290DCF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E7B58A1CC2AC0600A0062D /* RNTTeadsInReadAdViewManager.m in Sources */,
+				A0029B5A234400520078A9A4 /* RNTeadsInReadAdViewManager.swift in Sources */,
+				A0029B582343F1910078A9A4 /* RNTTeadsInReadAdViewManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +368,7 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -217,16 +379,22 @@
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNTeads;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNTeadsInReadAdViewManager-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -237,10 +405,14 @@
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNTeads;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNTeadsInReadAdViewManager-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

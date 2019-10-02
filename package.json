@@ -13,6 +13,9 @@
   ],
   "author": "Cedric Rassaert",
   "license": "",
+  "devDependencies": {
+    "react-native": "0.41.2"
+  },
   "peerDependencies": {
     "react-native": "^0.41.2"
   }

@@ -20,7 +20,12 @@ RCT_CUSTOM_VIEW_PROPERTY(pid, NSInteger, TFAInReadAdView) {
 - (TFAInReadAdView *)view {
     TFAInReadAdView *view = [[TFAInReadAdView alloc] initWithPid:0
                                                      andDelegate:self];
-    [view loadWithTeadsAdSettings:nil];
+    
+    TeadsAdSettings *teadsSettings =[[TeadsAdSettings alloc] initWithBuild:^(TeadsAdSettings * _Nonnull settings) {
+        return settings.enableValidationMode;
+    }];
+    
+    [view loadWithTeadsAdSettings:teadsSettings];
 
     return view;
 }
