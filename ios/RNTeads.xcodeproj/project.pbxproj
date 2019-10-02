@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A0029B4E2343E63F0078A9A4 /* libcxxreact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A044DF6C2343E3AD00290DCF /* libcxxreact.a */; };
 		A0029B582343F1910078A9A4 /* RNTTeadsInReadAdViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNTTeadsInReadAdViewManager.m */; };
-		A0029B5A234400520078A9A4 /* RNTeadsInReadAdViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0029B59234400520078A9A4 /* RNTeadsInReadAdViewManager.swift */; };
-		A044DF732343E40C00290DCF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A044DF642343E3AD00290DCF /* libReact.a */; };
 		CEFD1D43229E5F890012CBFD /* TeadsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFD1D42229E5F890012CBFD /* TeadsSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,8 +84,6 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNTeads.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNTeads.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0029B59234400520078A9A4 /* RNTeadsInReadAdViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNTeadsInReadAdViewManager.swift; sourceTree = "<group>"; };
-		A0029B5B234400870078A9A4 /* RNTeadsInReadAdViewManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNTeadsInReadAdViewManager-Bridging-Header.h"; sourceTree = "<group>"; };
 		A044DF582343E3AD00290DCF /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNTTeadsInReadAdViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNTTeadsInReadAdViewManager.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNTTeadsInReadAdViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNTTeadsInReadAdViewManager.m; sourceTree = "<group>"; };
@@ -100,8 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0029B4E2343E63F0078A9A4 /* libcxxreact.a in Frameworks */,
-				A044DF732343E40C00290DCF /* libReact.a in Frameworks */,
 				CEFD1D43229E5F890012CBFD /* TeadsSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,8 +113,6 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				A0029B5B234400870078A9A4 /* RNTeadsInReadAdViewManager-Bridging-Header.h */,
-				A0029B59234400520078A9A4 /* RNTeadsInReadAdViewManager.swift */,
 				CEFD1D42229E5F890012CBFD /* TeadsSDK.framework */,
 				B3E7B5881CC2AC0600A0062D /* RNTTeadsInReadAdViewManager.h */,
 				B3E7B5891CC2AC0600A0062D /* RNTTeadsInReadAdViewManager.m */,
@@ -276,7 +267,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0029B5A234400520078A9A4 /* RNTeadsInReadAdViewManager.swift in Sources */,
 				A0029B582343F1910078A9A4 /* RNTTeadsInReadAdViewManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,7 +375,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNTeads;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "RNTeadsInReadAdViewManager-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -411,7 +402,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNTeads;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "RNTeadsInReadAdViewManager-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
