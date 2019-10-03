@@ -6,28 +6,76 @@
 
 @implementation RNTTeadsInReadAdViewManager
 
-RCT_EXPORT_MODULE(RNTTeadsInReadAdView)
+@synthesize view;
+@synthesize pageUrl;
+@synthesize enableDebug;
+@synthesize enableValidation;
 
+RCT_EXPORT_MODULE(RNTTeadsInReadAdViewManager)
 RCT_EXPORT_VIEW_PROPERTY(onAdClose, RCTBubblingEventBlock);
 RCT_EXPORT_VIEW_PROPERTY(onDidReceiveAd, RCTBubblingEventBlock);
 RCT_EXPORT_VIEW_PROPERTY(onAdError, RCTBubblingEventBlock);
 RCT_EXPORT_VIEW_PROPERTY(onAdDidFail, RCTBubblingEventBlock);
+RCT_CUSTOM_VIEW_PROPERTY(enableDebug, BOOL, TFAInReadAdView) {
+  self.enableDebug = enableDebug;
+  NSLog(@"Setting enable debug");
+};
+
+RCT_CUSTOM_VIEW_PROPERTY(enableValidation, BOOL, TFAInReadAdView) {
+  self.enableValidation = enableValidation;
+  NSLog(@"Setting enable validation");
+};
+RCT_CUSTOM_VIEW_PROPERTY(pageUrl, NSString, TFAInReadAdView) {
+  self.pageUrl = pageUrl;
+  NSLog(@"Setting pageUrl");
+};
 RCT_CUSTOM_VIEW_PROPERTY(pid, NSInteger, TFAInReadAdView) {
     [view setPid:[RCTConvert NSInteger:json]];
-    [view loadWithTeadsAdSettings:nil];
+
+  TeadsAdSettings *teadsSettings = [[TeadsAdSettings alloc] initWithBuild:^(TeadsAdSettings * _Nonnull settings) {
+      [settings enableDebug];
+      //[settings enableValidationMode];
+    NSString *page = @"https://actu17.fr";
+        [settings pageUrl:(NSString * _Nonnull)page];
+    //  [settings pageUrl:(NSString * _Nonnull)pageUrl];
+
+    NSString *subjectToGDPR = @"0";
+    NSString *consent = @"Test";
+
+    [settings userConsentWithSubjectToGDPR:subjectToGDPR consent:consent];
+  }];
+  [view loadWithTeadsAdSettings:teadsSettings];
 }
 
 - (TFAInReadAdView *)view {
     TFAInReadAdView *view = [[TFAInReadAdView alloc] initWithPid:0
                                                      andDelegate:self];
-    
-    TeadsAdSettings *teadsSettings =[[TeadsAdSettings alloc] initWithBuild:^(TeadsAdSettings * _Nonnull settings) {
-        return settings.enableValidationMode;
-    }];
-    
-    [view loadWithTeadsAdSettings:teadsSettings];
-
     return view;
+}
+
+- (void)viewDidLoad
+{
+  NSLog(@"Teads did load");
+  NSLog(@"%ld", (long)view.pid);
+  NSLog(@"%hhu", self.enableValidation);
+  NSLog(@"%@", self.pageUrl);
+    TeadsAdSettings *teadsSettings = [[TeadsAdSettings alloc] initWithBuild:^(TeadsAdSettings * _Nonnull settings) {
+      if (enableDebug) {
+        [settings enableDebug];
+      }
+      if (enableValidation) {
+        [settings enableValidationMode];
+      }
+      //if (pageUrl) {
+      //  [settings pageUrl:(NSString * _Nonnull)pageUrl];
+      //}
+
+      NSString *subjectToGDPR = @"Sujet RGPD";
+      NSString *consent = @"Test";
+
+      [settings userConsentWithSubjectToGDPR:subjectToGDPR consent:consent];
+    }];
+    [view loadWithTeadsAdSettings:teadsSettings];
 }
 
 #pragma mark - TFAAdDelegate
