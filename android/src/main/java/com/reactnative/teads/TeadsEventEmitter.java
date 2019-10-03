@@ -15,11 +15,11 @@ import tv.teads.sdk.android.AdFailedReason;
 
 public class TeadsEventEmitter {
 
-    private static final String ON_AD_LOADED = "onDidReceiveAd";
-    private static final String ON_FAILED_TO_LOAD = "onAdDidFail";
-    private static final String ON_AD_DISPLAYED = "onAdDisplayed";
-    private static final String ON_AD_CLOSED = "onAdClose";
-    private static final String ON_ERROR = "onAdError";
+    private static final String ON_AD_LOADED = "onTeadsAdLoaded";
+    private static final String ON_FAILED_TO_LOAD = "onTeadsAdFailedToLoad";
+    private static final String ON_AD_DISPLAYED = "onTeadsAdDisplayed";
+    private static final String ON_AD_CLOSED = "onTeadsAdClose";
+    private static final String ON_ERROR = "onTeadsAdError";
 
     static final String[] Events = {
             ON_AD_LOADED,
