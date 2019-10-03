@@ -12,10 +12,13 @@
 @synthesize enableValidation;
 
 RCT_EXPORT_MODULE(RNTTeadsInReadAdViewManager)
-RCT_EXPORT_VIEW_PROPERTY(onAdClose, RCTBubblingEventBlock);
-RCT_EXPORT_VIEW_PROPERTY(onDidReceiveAd, RCTBubblingEventBlock);
-RCT_EXPORT_VIEW_PROPERTY(onAdError, RCTBubblingEventBlock);
-RCT_EXPORT_VIEW_PROPERTY(onAdDidFail, RCTBubblingEventBlock);
+
+RCT_EXPORT_VIEW_PROPERTY(onTeadsAdClose, RCTBubblingEventBlock);
+RCT_EXPORT_VIEW_PROPERTY(onTeadsAdError, RCTBubblingEventBlock);
+RCT_EXPORT_VIEW_PROPERTY(onTeadsAdLoaded, RCTBubblingEventBlock);
+RCT_EXPORT_VIEW_PROPERTY(onTeadsAdFailedToLoad, RCTBubblingEventBlock);
+RCT_EXPORT_VIEW_PROPERTY(onTeadsAdDisplayed, RCTBubblingEventBlock);
+
 RCT_CUSTOM_VIEW_PROPERTY(enableDebug, BOOL, TFAInReadAdView) {
   self.enableDebug = enableDebug;
   NSLog(@"Setting enable debug");
@@ -81,36 +84,36 @@ RCT_CUSTOM_VIEW_PROPERTY(pid, NSInteger, TFAInReadAdView) {
 #pragma mark - TFAAdDelegate
 
 - (void)adClose:(TFAInReadAdView * _Nonnull)ad userAction:(BOOL)userAction {
-    if (!ad.onAdClose) {
+    if (!ad.onTeadsAdClose) {
         return;
     }
 
-    ad.onAdClose(nil);
+    ad.onTeadsAdClose(nil);
 }
 
 - (void)adError:(TFAInReadAdView * _Nonnull)ad errorMessage:(NSString * _Nonnull)errorMessage {
-    if (!ad.onAdError) {
+    if (!ad.onTeadsAdError) {
         return;
     }
 
-    ad.onAdError(@{@"errorMessage" : errorMessage});
+    ad.onTeadsAdError(@{@"errorMessage" : errorMessage});
 }
 
 - (void)didFailToReceiveAd:(TFAInReadAdView * _Nonnull)ad adFailReason:(AdFailReason * _Nonnull)adFailReason {
-    if (!ad.onAdDidFail) {
+    if (!ad.onTeadsAdFailedToLoad) {
         return;
     }
 
-    ad.onAdDidFail(@{@"errorCode" : @(adFailReason.errorCode),
+    ad.onTeadsAdFailedToLoad(@{@"errorCode" : @(adFailReason.errorCode),
                      @"errorMessage" : adFailReason.errorMessage});
 }
 
 - (void)didReceiveAd:(TFAInReadAdView * _Nonnull)ad adRatio:(CGFloat)adRatio {
-    if (!ad.onDidReceiveAd) {
+    if (!ad.onTeadsAdLoaded) {
         return;
     }
 
-    ad.onDidReceiveAd(@{@"adRatio" : @(adRatio)});
+    ad.onTeadsAdLoaded(@{@"adRatio" : @(adRatio)});
 }
 
 @end
@@ -120,46 +123,46 @@ RCT_CUSTOM_VIEW_PROPERTY(pid, NSInteger, TFAInReadAdView) {
 #import <objc/runtime.h>
 
 @implementation TFAInReadAdView (AssociatedObject)
-@dynamic onAdClose;
+@dynamic onTeadsAdClose;
 
-#pragma mark OnAdClose
+#pragma mark OnTeadsAdClose
 
-- (void)setOnAdClose:(RCTBubblingEventBlock)object {
-    objc_setAssociatedObject(self, @selector(onAdClose), object, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)setOnTeadsAdClose:(RCTBubblingEventBlock)object {
+    objc_setAssociatedObject(self, @selector(onTeadsAdClose), object, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-- (RCTBubblingEventBlock)onAdClose {
-    return objc_getAssociatedObject(self, @selector(onAdClose));
+- (RCTBubblingEventBlock)onTeadsAdClose {
+    return objc_getAssociatedObject(self, @selector(onTeadsAdClose));
 }
 
-#pragma mark OnDidReceiveAd
+#pragma mark OnTeadsAdLoaded
 
-- (void)setOnDidReceiveAd:(RCTBubblingEventBlock)object {
-    objc_setAssociatedObject(self, @selector(onDidReceiveAd), object, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)setOnTeadsAdLoaded:(RCTBubblingEventBlock)object {
+    objc_setAssociatedObject(self, @selector(onTeadsAdLoaded), object, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-- (RCTBubblingEventBlock)onDidReceiveAd {
-    return objc_getAssociatedObject(self, @selector(onDidReceiveAd));
+- (RCTBubblingEventBlock)onTeadsAdLoaded {
+    return objc_getAssociatedObject(self, @selector(onTeadsAdLoaded));
 }
 
-#pragma mark OnAdError
+#pragma mark OnTeadsAdError
 
 - (void)setOnAdError:(RCTBubblingEventBlock)object {
-    objc_setAssociatedObject(self, @selector(onAdError), object, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(onTeadsAdError), object, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-- (RCTBubblingEventBlock)onAdError {
-    return objc_getAssociatedObject(self, @selector(onAdError));
+- (RCTBubblingEventBlock)onTeadsAdError {
+    return objc_getAssociatedObject(self, @selector(onTeadsAdError));
 }
 
-#pragma mark OnAdDidFail
+#pragma mark OnTeadsAdFailedToLoad
 
-- (void)setOnAdDidFail:(RCTBubblingEventBlock)object {
-    objc_setAssociatedObject(self, @selector(onAdDidFail), object, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)setOnTeadsAdFailedToLoad:(RCTBubblingEventBlock)object {
+    objc_setAssociatedObject(self, @selector(onTeadsAdFailedToLoad), object, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-- (RCTBubblingEventBlock)onAdDidFail {
-    return objc_getAssociatedObject(self, @selector(onAdDidFail));
+- (RCTBubblingEventBlock)onTeadsAdFailedToLoad {
+    return objc_getAssociatedObject(self, @selector(onTeadsAdFailedToLoad));
 }
 
 @end

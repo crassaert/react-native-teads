@@ -26,9 +26,10 @@
 
 @interface TFAInReadAdView (AssociatedObject)
 
-@property (nonatomic, copy) RCTBubblingEventBlock onAdClose;
-@property (nonatomic, copy) RCTBubblingEventBlock onDidReceiveAd;
-@property (nonatomic, copy) RCTBubblingEventBlock onAdError;
-@property (nonatomic, copy) RCTBubblingEventBlock onAdDidFail;
+@property (nonatomic, copy) RCTBubblingEventBlock onTeadsAdClose;
+@property (nonatomic, copy) RCTBubblingEventBlock onTeadsAdLoaded;
+@property (nonatomic, copy) RCTBubblingEventBlock onTeadsAdError;
+@property (nonatomic, copy) RCTBubblingEventBlock onTeadsAdFailedToLoad;
+@property (nonatomic, copy) RCTBubblingEventBlock onTeadsAdDisplayed;
 
 @end
