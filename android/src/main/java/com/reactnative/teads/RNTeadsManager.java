@@ -92,13 +92,6 @@ public class RNTeadsManager extends SimpleViewManager<CustomInReadAdView> {
     }
   }
 
-  @ReactProp(name = "enableValidationMode")
-  public void enableValidationMode(CustomInReadAdView view, @Nullable Boolean enableValidationMode) {
-    if (enableValidationMode != null && enableValidationMode) {
-      view.enableValidationMode();
-    }
-  }
-
   @ReactProp(name = "load")
   public void load(CustomInReadAdView view, @Nullable Boolean enableDebug) {
     if (view.getPlacementId() != null && !view.getPlacementId().equals("0")) {
