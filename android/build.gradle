@@ -34,7 +34,7 @@ android {
 dependencies {
     implementation "com.facebook.react:react-native:${safeExtGet('reactNativeVersion', '+')}"
     implementation 'com.google.android.gms:play-services-basement:12.0.1'
-    implementation("tv.teads.sdk.android:sdk:4.3.0@aar") {
+    implementation("tv.teads.sdk.android:sdk:4.6.0@aar") {
         transitive = true
     }
 }
